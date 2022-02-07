@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="BOARD/indexfunctions.js"></script>
+    <script type="text/javascript" src="BOARD/boardfunctions.js"></script>
+    <script type="text/javascript" src="BOARD/nodefunctions.js"></script>
+    <script type="text/javascript" src="ALGO/astarfunctions.js"></script>
+    <script type="text/javascript" src="ALGO/depthfirstfunctions.js"></script>
+    <script type="text/javascript" src="ALGO/breadthfirstfunctions.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <title>( test projrct )</title>
+</head>
+
+<body>
+    <div id="top_menu" class="menu">
+        <h1>Pathfinding Visualizer Project</h1>
+        <ul>
+            <select name="pathfinding_function" id="pathfinding_function" style="padding: 10px;border:none;border-radius: 25px;">
+                <option value="none" selected disabled hidden> -- Select an Option -- </option>
+                <option value="aStar">A-Star</option>
+                <option value="depthFirst">Depth-First</option>
+                <option value="breadthFirst">Breadth-First</option>
+            </select>
+            <li><button id="run_button">RUN <i class="fa fa-play" id = "run_button"></i></button></li>
+        </ul>
+    </div>
+    <div id="table_container" ondragstart="return false;" ondrop="return false;"></div>
+</body>
+
+</html>
