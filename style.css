@@ -1,0 +1,156 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+html {
+    width: 100%;
+    height: 99%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#top_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #073b4c;
+}
+
+h1 {
+    color: #ffd166;
+    margin: 10px 20px;
+    width: 620px;
+    font-family: cursive;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+}
+
+button {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 1px;
+    height: 30px;
+    width: 90px;
+    color: #073b4c;
+    background-color: #ffd166;
+    border-color: #073b4c;
+    border-width: 0px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #06d6a0;
+    color: #073b4c;
+    transform: scale(1.05);
+}
+
+button:active {
+    opacity: 1;
+    transform: scale(2);
+}
+
+table,
+#table_container {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    background-color: lightgrey;
+    animation-name: fadeInAnimation;
+    animation-duration: 2s;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: lightgrey;
+    }
+}
+
+td {
+    border: 1px solid skyblue;
+    padding: 0;
+    transition: all 0.3s linear;
+    animation-duration: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+.empty {
+    background-color: white;
+    transition: none;
+}
+
+.empty:hover {
+    background-color: #800000;
+}
+
+.wall {
+    background-color: #800000;
+    animation-name: selectAnimation;
+}
+
+.wall:hover {
+    background-color: #980000;
+}
+
+.path {
+    background-color: #ef476f;
+}
+
+.visited {
+    background-color: #FFCC99;
+}
+
+.start {
+    background-color: lightgreen;
+}
+
+.start:hover {
+    background-color: green;
+}
+
+.end {
+    background-color: pink;
+}
+
+.end:hover {
+    background-color: red;
+}
+
+@keyframes unselectAnimation {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.1);
+    }
+}
+
+@keyframes selectAnimation {
+    0% {
+        transform: scale(.1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
